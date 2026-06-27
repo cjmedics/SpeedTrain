@@ -5,7 +5,6 @@ description = "SpeechTrain AI agent scaffold using FastAPI and Groq."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "croo>=0.1.7",
     "fastapi>=0.115.0",
     "groq>=0.13.0",
     "pydantic-settings>=2.7.0",
@@ -27,3 +26,6 @@ target-version = "py311"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.vercel]
+entrypoint = "app.main:app"

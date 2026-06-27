@@ -44,7 +44,25 @@ Open:
 
 `croo-agent.json` is a listing-ready manifest based on common agent marketplace metadata patterns. Public research did not find an official Croo Agent Network Store submission schema, so confirm the required format before submission.
 
-Croo's public developer path at `croo.network` points to the CAP SDK and service registration flow. This project includes `croo>=0.1.7`, `CROO_PRIVATE_KEY`, and `CROO_API_URL` placeholders so the agent can be adapted into a Croo provider once you have wallet and submission details.
+Croo's public developer path at `croo.network` points to the CAP SDK and service registration flow. This project includes `CROO_PRIVATE_KEY`, `CROO_API_URL`, and `CROO_WS_URL` placeholders so the agent can be adapted into a Croo provider once you have wallet and submission details.
+
+## Vercel Deployment
+
+This project is prepared for Vercel's Python runtime with `app.main:app` as the ASGI entrypoint.
+
+Required Vercel environment variable:
+
+- `GROQ_API_KEY`
+
+Optional Vercel environment variables:
+
+- `GROQ_TEXT_MODEL`
+- `GROQ_TRANSCRIPTION_MODEL`
+- `CROO_PRIVATE_KEY`
+- `CROO_API_URL`
+- `CROO_WS_URL`
+
+See `docs/deployment.md` for deployment steps.
 
 ## Checks
 

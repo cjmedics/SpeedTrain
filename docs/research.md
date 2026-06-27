@@ -81,7 +81,7 @@ Public Croo pages reviewed:
 Key findings from the public Croo material:
 
 - Croo positions agents as commercial services that can be discovered and purchased through the network.
-- The developer path points to installing the Croo/CAP Python SDK.
+- The public developer path points to installing a Croo/CAP SDK and shows JavaScript/Node-style setup in the public CAP material reviewed.
 - Provider setup appears to require wallet credentials, especially a private key.
 - Service registration is part of the network flow.
 - A provider process listens for incoming requests, commonly described around WebSocket/network events.
@@ -118,7 +118,7 @@ Action needed before store submission:
 2. Validate required fields, naming conventions, authentication requirements, endpoint expectations, and wallet requirements.
 3. Replace placeholder publisher, repository, contact, and license values.
 4. Add store-required screenshots, icons, terms, privacy policy, or verification metadata if Croo requires them.
-5. If Croo requires CAP-native registration, implement a provider runner using the `croo` Python SDK and map incoming CAP requests to the existing FastAPI/Groq service logic.
+5. If Croo requires CAP-native registration, implement a provider runner using the public CAP SDK and map incoming CAP requests to the existing FastAPI/Groq service logic.
 
 ## Virtual Environment Status
 

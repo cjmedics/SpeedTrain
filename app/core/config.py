@@ -10,7 +10,8 @@ class Settings(BaseSettings):
     groq_text_model: str = "llama-3.3-70b-versatile"
     groq_transcription_model: str = "whisper-large-v3-turbo"
     croo_private_key: str = ""
-    croo_api_url: str = "wss://network.croo.network"
+    croo_api_url: str = "https://api.croo.network"
+    croo_ws_url: str = "wss://network.croo.network"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 

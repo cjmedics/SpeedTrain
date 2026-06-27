@@ -59,6 +59,11 @@
     {
       "name": "CROO_API_URL",
       "required": false,
+      "default": "https://api.croo.network"
+    },
+    {
+      "name": "CROO_WS_URL",
+      "required": false,
       "default": "wss://network.croo.network"
     }
   ],

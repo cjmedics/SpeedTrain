@@ -33,6 +33,7 @@ def create_app() -> FastAPI:
             "text_model": settings.groq_text_model,
             "transcription_model": settings.groq_transcription_model,
             "croo_api_url": settings.croo_api_url,
+            "croo_ws_url": settings.croo_ws_url,
         }
 
     return app
