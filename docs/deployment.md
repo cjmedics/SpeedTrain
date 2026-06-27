@@ -8,7 +8,7 @@ SpeechTrain is prepared for Vercel's Python runtime as a FastAPI ASGI app.
 - `api/index.py` is the Vercel Serverless Function adapter that imports `app.main:app`.
 - `pyproject.toml` sets `[tool.vercel] entrypoint = "api.index:app"`.
 - `.python-version` pins Vercel/local runtime intent to Python 3.12.
-- `vercel.json` includes static assets and `croo-agent.json` in the serverless function bundle.
+- `vercel.json` rewrites all requests to the Python API entrypoint.
 - `.vercelignore` keeps local-only files out of deployment.
 
 ## Environment Variables
