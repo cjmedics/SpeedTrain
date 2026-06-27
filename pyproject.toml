@@ -28,4 +28,4 @@ target-version = "py311"
 testpaths = ["tests"]
 
 [tool.vercel]
-entrypoint = "app.main:app"
+entrypoint = "api/index.py"
