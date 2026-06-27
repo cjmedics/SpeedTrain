@@ -3,10 +3,7 @@
   "functions": {
     "app/main.py": {
       "maxDuration": 30,
-      "includeFiles": [
-        "static/**",
-        "croo-agent.json"
-      ]
+      "includeFiles": "{static/**,croo-agent.json}"
     }
   }
 }
