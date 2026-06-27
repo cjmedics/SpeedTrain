@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1.0-draft",
+  "network": "croo-agent-network",
+  "listing_status": "submission-ready-draft",
+  "name": "SpeechTrain",
+  "slug": "speechtrain",
+  "version": "0.1.0",
+  "tagline": "AI conversation coaching for starting, sustaining, and ending better conversations.",
+  "description": "SpeechTrain is a FastAPI-based AI agent that uses Groq for low-latency conversation coaching and speech transcription workflows. It helps users start casual or professional conversations, choose what to say next, ask curiosity-building follow-up questions, keep the other person involved, and close conversations naturally.",
+  "categories": [
+    "education",
+    "productivity",
+    "communication",
+    "coaching"
+  ],
+  "capabilities": [
+    "speech_transcription",
+    "conversation_coaching",
+    "conversation_openers",
+    "follow_up_questions",
+    "professional_small_talk",
+    "casual_conversation",
+    "conversation_closing"
+  ],
+  "runtime": {
+    "type": "http-api",
+    "network_protocol": "cap-draft",
+    "framework": "fastapi",
+    "language": "python",
+    "python_version": ">=3.11"
+  },
+  "endpoints": {
+    "health": "/health",
+    "agent_card": "/api/v1/agent-card",
+    "chat": "/api/v1/chat",
+    "transcribe": "/api/v1/transcribe"
+  },
+  "environment": [
+    {
+      "name": "GROQ_API_KEY",
+      "required": true,
+      "secret": true
+    },
+    {
+      "name": "GROQ_TEXT_MODEL",
+      "required": false,
+      "default": "llama-3.3-70b-versatile"
+    },
+    {
+      "name": "GROQ_TRANSCRIPTION_MODEL",
+      "required": false,
+      "default": "whisper-large-v3-turbo"
+    },
+    {
+      "name": "CROO_PRIVATE_KEY",
+      "required": true,
+      "secret": true
+    },
+    {
+      "name": "CROO_API_URL",
+      "required": false,
+      "default": "wss://network.croo.network"
+    }
+  ],
+  "privacy": {
+    "stores_user_audio": false,
+    "stores_user_text": false,
+    "notes": "The scaffold processes uploaded audio in memory and does not persist content by default."
+  },
+  "publisher": {
+    "name": "SpeechTrain",
+    "contact": "replace-with-publisher-contact"
+  },
+  "repository": "replace-with-repository-url",
+  "license": "replace-with-license",
+  "submission_notes": "No public Croo Agent Network Store manifest schema was found during research on 2026-06-27. Validate this draft against official Croo requirements before publishing."
+}

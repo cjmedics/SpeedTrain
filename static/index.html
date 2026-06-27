@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SpeechTrain</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">FastAPI + Groq agent</p>
+          <h1>SpeechTrain</h1>
+          <p class="lede">
+            Practice casual and professional conversations, find the next thing to say,
+            and learn how to keep the other person curious and involved.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="/docs">API docs</a>
+            <button class="button" id="healthButton" type="button">Check health</button>
+          </div>
+          <pre class="status" id="healthOutput">Ready to test the local API.</pre>
+        </div>
+        <div class="signal-panel" aria-label="Speech signal preview">
+          <div class="meter-grid">
+            <span style="--level: 42%"></span>
+            <span style="--level: 68%"></span>
+            <span style="--level: 34%"></span>
+            <span style="--level: 84%"></span>
+            <span style="--level: 57%"></span>
+            <span style="--level: 72%"></span>
+            <span style="--level: 48%"></span>
+            <span style="--level: 91%"></span>
+            <span style="--level: 63%"></span>
+            <span style="--level: 39%"></span>
+            <span style="--level: 76%"></span>
+            <span style="--level: 52%"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="SpeechTrain testing tools">
+        <form class="panel" id="chatForm">
+          <div class="panel-heading">
+            <h2>Coach</h2>
+            <span>POST /api/v1/chat</span>
+          </div>
+          <label for="message">Prompt</label>
+          <textarea id="message" rows="7">I am at a professional networking event and just met a product manager. Give me a natural opener, three follow-up questions, and a warm way to end the conversation.</textarea>
+          <button class="button primary" type="submit">Send prompt</button>
+          <pre class="result" id="chatOutput">Response will appear here.</pre>
+        </form>
+
+        <form class="panel" id="transcribeForm">
+          <div class="panel-heading">
+            <h2>Transcribe</h2>
+            <span>POST /api/v1/transcribe</span>
+          </div>
+          <label for="audio">Audio file</label>
+          <input id="audio" name="file" type="file" accept="audio/*" />
+          <button class="button primary" type="submit">Upload audio</button>
+          <pre class="result" id="transcribeOutput">Transcript and conversation review input will appear here.</pre>
+        </form>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Agent card</h2>
+            <span>GET /api/v1/agent-card</span>
+          </div>
+          <button class="button" id="agentButton" type="button">Load card</button>
+          <pre class="result" id="agentOutput">Croo listing metadata will appear here.</pre>
+        </section>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
