@@ -48,7 +48,7 @@ Croo's public developer path at `croo.network` points to the CAP SDK and service
 
 ## Vercel Deployment
 
-This project is prepared for Vercel's Python runtime with `api/index.py` as the Serverless Function entrypoint. That file imports the FastAPI app from `app.main:app`.
+This project is prepared for Vercel's Python runtime with `api.index:app` as the Python entrypoint. The adapter at `api/index.py` imports the FastAPI app from `app.main:app`.
 
 Required Vercel environment variable:
 
